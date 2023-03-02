@@ -1,7 +1,7 @@
 
 
 export async function get_neuro_data(selected_districts) {
-    let request_url = 'http://87.242.92.163:5000/api?radius=REPLACE_TO_RADIUS&model=REPLACE_TO_MODEL_NUM&object_types=REPLACE_TO_OBJECTS&area=REPLACE_TO_TYPE&REPLACE_TO_CATEGORIES=REPLACE_TO_PLACES'
+    let request_url = 'http://127.0.0.1:5000/api?radius=REPLACE_TO_RADIUS&model=REPLACE_TO_MODEL_NUM&object_types=REPLACE_TO_OBJECTS&area=REPLACE_TO_TYPE&REPLACE_TO_CATEGORIES=REPLACE_TO_PLACES'
     //127.0.0.1:5000/api?radius=1000&model=1&object_types=kiosk,tc,mfc,dk,library,sport&area=rayon&rayons=район+Ясенево,район+Кунцево
     //127.0.0.1:5000/api?radius=1000&model=2&object_types=kiosk,tc,mfc,dk,library,sport&area=okrug&okrugas=Северный+административный+округ&partners=PickPoint,Цайняо
     let radius = document.getElementById("radiusSlider").value;
@@ -17,7 +17,7 @@ export async function get_neuro_data(selected_districts) {
     }
     else {
         model_num = 2;
-        temp_area = "okrug"
+        temp_area = "okruga"
         temp_categories = "okrugas"
         district_names_right_format = selected_districts.replaceAll(" ", "+")
             let selected = [];
