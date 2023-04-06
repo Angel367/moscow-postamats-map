@@ -1,0 +1,4 @@
+Django==4.2
+flask==2.2.3
+flask_cors==3.0.10
+django-cors-headers==3.14.0
