@@ -1,2 +1,7 @@
+![](https://img.shields.io/badge/Код-замечательный-brightgreen.svg?style=flat)
 # moscow-postamats-map
-Django web-server and mathematical model for finding the best places for postamats in Moscow.
+## _Описание_
+WEB-сервис с картой для нахождения наиболее оптимального места для размещения постамата. Для этого будет использоваться математическая модель, учитывающая текущие постаматы, количество населения, проживающего в рассматриваемой области, и другие параметры.
+## _Зависимости_
+- Django
+- Flask
