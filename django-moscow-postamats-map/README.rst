@@ -1,29 +1,25 @@
-=====
-Polls
-=====
+=====================
+moscow postamats map
+=====================
 
-Polls is a Django app to conduct web-based polls. For each question,
-visitors can choose between a fixed number of answers.
+moscow-postamats-map is a Django app to finding the best locations for postamats.
+For this process app will use ML, that analyze demography, existing postamats in
+some district, and other factors.
 
 Detailed documentation is in the "docs" directory.
 
 Quick start
 -----------
 
-1. Add "polls" to your INSTALLED_APPS setting like this::
+1. Add "map" to your INSTALLED_APPS setting like this::
 
     INSTALLED_APPS = [
         ...
-        'polls',
+        'map',
     ]
 
-2. Include the polls URLconf in your project urls.py like this::
+2. Include the map URLconf in your project urls.py like this::
 
-    path('polls/', include('polls.urls')),
+    path('map/', include('map.urls')),
 
-3. Run ``python manage.py migrate`` to create the polls models.
-
-4. Start the development server and visit http://127.0.0.1:8000/admin/
-   to create a poll (you'll need the Admin app enabled).
-
-5. Visit http://127.0.0.1:8000/polls/ to participate in the poll.
+3. Visit http://127.0.0.1:8000/map/ to use service.
