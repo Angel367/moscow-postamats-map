@@ -4,6 +4,9 @@ from django.http import HttpResponse
 
 
 def index_view(request):
+    """
+    Функция, выполняющая рендер основной страницы.
+    """
     # template = loader.get_template('')
     return render(request, 'map/index.html')
 
