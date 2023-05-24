@@ -21,3 +21,4 @@ Detailed documentation is in the "docs" directory.
         path('map/', include('map.urls')),
 
 3. Visit <http://127.0.0.1:8000/polls/> to participate in the poll.
+
