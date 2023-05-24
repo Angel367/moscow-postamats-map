@@ -2,7 +2,6 @@
   "name": "map-app",
   "type": "module",
   "dependencies": {
-    "fs": "^0.0.1-security",
     "require": "^0.4.4",
     "xhr2": "^0.2.1"
   }
