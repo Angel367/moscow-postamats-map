@@ -1,4 +1,4 @@
-import * as areas_json from './areas_arr.json' assert {type: 'json'};
+import * as areas_json from './areas_arr.json'/*  assert {type: 'json'} */;
 
 export function get_areas_arr(){
     let areasArr = []
