@@ -124,12 +124,6 @@ def create_hexagon_grid_coords(startx, starty, endx, endy, radius):
     return polygons
 
 
-
-
-
-
-
-
 def generate_js_files():
     with open('multipolygons.json', encoding='utf-8') as file:
         data = json.load(file)
@@ -151,7 +145,7 @@ def generate_js_files():
     for i in range(0, len(names)):
         file_name = "areas(to move)/polylabel" + str(i) + ".js"
         f = open(file_name, 'w', encoding='utf-8')
-        r = lambda: random.randint(0, 255)
+        def r(): return random.randint(0, 255)
         color = '#%02X%02X%02X' % (r(), r(), r())
         info = text.replace("REPLACE_TO_I", str(i))
         info = info.replace("REPLACE_TO_NAME", names[i])
@@ -169,10 +163,10 @@ def parse_houses():
         elements = dict_data['elements']
         result = "var data = ["
         for element in elements:
-            result += '[' + str(element['center']['lat']) + ',' + str(element['center']['lon']) + '], '
+            result += '[' + str(element['center']['lat']) + \
+                ',' + str(element['center']['lon']) + '], '
 
-        file_name = "data_for_js_file.txt"
-        f = open(file_name, 'x', encoding='utf-8')
+        f = open("polygon-data.js", 'x', encoding='utf-8')
         f.write(result)
 
 
@@ -185,17 +179,18 @@ def json_test_parse():
         data = json.load(file)
         d = {}
         for i in data:
-            #print(i)
+            # print(i)
             d[i[0]] = i[1]
 
         print(d)
         with open('postamats_yandex_coords_final.json', 'w', encoding='utf-8') as file1:
-            json_data = json.dumps([{'id': k, 'coordinates': v} for k,v in d.items()], indent=4)
+            json_data = json.dumps([{'id': k, 'coordinates': v}
+                                   for k, v in d.items()], indent=4)
             file1.write(json_data)
 
 
 if __name__ == "__main__":
     json_test_parse()
-    #(create_hexagon_grid_coords(1, 1, 4, 4, 3))
-    #generate_js_files()
-    #parse_houses()
+    # (create_hexagon_grid_coords(1, 1, 4, 4, 3))
+    # generate_js_files()
+    # parse_houses()
